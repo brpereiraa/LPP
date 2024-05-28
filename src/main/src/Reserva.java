@@ -42,12 +42,10 @@ public class Reserva {
     }
 
     public void setData(LocalDate data) {
-        if (data == null) {
+        if (data == null)
             throw new IllegalArgumentException("Data não pode ser nula");
-        }
-        if (data.isBefore(LocalDate.now())) {
+        if (data.isBefore(LocalDate.now()))
             throw new IllegalArgumentException("Data não pode ser no passado");
-        }
         this.data = data;
     }
 
@@ -56,12 +54,10 @@ public class Reserva {
     }
 
     public void setHora(LocalTime hora) {
-        if (hora == null) {
+        if (hora == null)
             throw new IllegalArgumentException("Hora não pode ser nula");
-        }
-        if (hora.isBefore(LocalTime.of(6, 0)) || hora.isAfter(LocalTime.of(23, 0))) {
+        if (hora.isBefore(LocalTime.of(6, 0)) || hora.isAfter(LocalTime.of(23, 0)))
             throw new IllegalArgumentException("Hora deve estar entre 06:00 e 23:00");
-        }
         this.hora = hora;
     }
 
@@ -70,9 +66,8 @@ public class Reserva {
     }
 
     public void setNumeroDePessoas(int numeroDePessoas) {
-        if (numeroDePessoas < 0 || numeroDePessoas > 40) {
+        if (numeroDePessoas < 0 || numeroDePessoas > 40)
             throw new IllegalArgumentException("Número de pessoas deve ser entre 1 e 40");
-        }
         this.numeroDePessoas = numeroDePessoas;
     }
 
@@ -81,9 +76,8 @@ public class Reserva {
     }
 
     public void setStatus(StatusReserva status) {
-        if (status == null) {
+        if (status == null)
             throw new IllegalArgumentException("Status não pode ser nulo");
-        }
         this.status = status;
     }
 

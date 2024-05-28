@@ -8,6 +8,7 @@ public class Main {
 
 
         Reserva reserva = new Reserva(LocalDate.now(), LocalTime.now(), 4, Reserva.StatusReserva.ATIVA);
+        reserva.setNumeroDePessoas(50);
         System.out.println(reserva);
 
 

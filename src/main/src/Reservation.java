@@ -1,4 +1,4 @@
 package main.src;
 
-public class Reservation {
+public class Reservation implements Payment{
 }
