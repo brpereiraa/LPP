@@ -34,9 +34,8 @@ public class Mesa {
     }
 
     public void setNumeroDaMesa(int numeroDaMesa) {
-        if (numeroDaMesa <= 0 || numeroDaMesa >= 40) {
+        if (numeroDaMesa <= 0 || numeroDaMesa >= 40)
             throw new IllegalArgumentException("Número da mesa deve ser positivo e menor que 40.");
-        }
         this.numeroDaMesa = numeroDaMesa;
     }
 
@@ -45,9 +44,8 @@ public class Mesa {
     }
 
     public void setCapacidade(int capacidade) {
-        if (capacidade <= 0 || capacidade >= 100) {
+        if (capacidade <= 0 || capacidade >= 100)
             throw new IllegalArgumentException("Capacidade deve ser positiva e menor que 100.");
-        }
         this.capacidade = capacidade;
     }
 
@@ -56,9 +54,8 @@ public class Mesa {
     }
 
     public void setLocalizacao(Localizacao localizacao) {
-        if (localizacao == null) {
+        if (localizacao == null)
             throw new IllegalArgumentException("Localização não pode ser nula.");
-        }
         this.localizacao = localizacao;
     }
 
