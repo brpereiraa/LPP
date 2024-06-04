@@ -1,20 +1,9 @@
 package main.src;
-
-import java.time.LocalDate;
-import java.time.LocalTime;
+import main.gui.*;
 
 public class Main {
     public static void main(String[] args) {
-
-
-        Reserva reserva = new Reserva(LocalDate.now(), LocalTime.now(), 4, Reserva.StatusReserva.ATIVA);
-        reserva.setNumeroDePessoas(50);
-        System.out.println(reserva);
-
-
-
-
-
-
+        System.out.println("Restaurant Management App");
+        new MainWindow();
     }
 }
