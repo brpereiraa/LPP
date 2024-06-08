@@ -30,9 +30,8 @@ public class Bilhete {
     }
 
     public void setNumeroDoBilhete(int numeroDoBilhete) {
-        if (numeroDoBilhete <= 0) {
+        if (numeroDoBilhete <= 0)
             throw new IllegalArgumentException("Número do bilhete deve ser positivo.");
-        }
         this.numeroDoBilhete = numeroDoBilhete;
     }
 

@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 public class MainWindow extends JFrame {
     public MainWindow(){
         JFrame frame;
-        JButton buttonC, buttonR, buttonL;
+        JButton buttonC, buttonR, buttonL, buttonLR;
         JPanel panelC, panelR;
         Color LightBlue;
 
@@ -17,6 +17,7 @@ public class MainWindow extends JFrame {
         buttonC = new JButton("Create Restaurant");
         buttonR = new JButton("Make Reservation");
         buttonL = new JButton("List Reservations");
+        buttonLR = new JButton("List restaurants");
         panelR = new JPanel();
         panelC = new JPanel();
 
@@ -28,20 +29,35 @@ public class MainWindow extends JFrame {
         panelC.setLayout(new GridLayout(2,2));
         panelR.setLayout(new GridLayout(2,2));
 
-        buttonC.setBounds(50, 200, 200, 50);
-        buttonR.setBounds(300, 200, 200, 50);
-        buttonL.setBounds(550, 200, 200, 50);
+        buttonC.setBounds(150, 200, 200, 50);
+        buttonR.setBounds(400, 200, 200, 50);
+        buttonL.setBounds(150, 260, 200, 50);
+        buttonLR.setBounds(400, 260, 200, 50);
 
         buttonC.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                createRestaurant();
-            }
+            public void actionPerformed(ActionEvent e) { createRestaurant(); }
+        });
+
+        buttonLR.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) { listRestaurant(); }
+        });
+
+        buttonL.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) { listReservations(); }
+        });
+
+        buttonR.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) { createReservation(); }
         });
 
         frame.add(buttonC);
         frame.add(buttonR);
         frame.add(buttonL);
+        frame.add(buttonLR);
 
         frame.setSize(800, 600);
         frame.setLayout(null);
@@ -87,8 +103,31 @@ public class MainWindow extends JFrame {
         frame.add(labelL);
         frame.add(labelC);
 
-        frame.setSize(800, 600);
+        frame.setSize(600, 800);
         frame.setLayout(null);
         frame.setVisible(true);
+    }
+
+    public void listRestaurant(){
+        JFrame frame;
+        JTable table;
+
+        String columns[] = { "Name", "Location", "Capacity", "Type" };
+        frame = new JFrame("Restaurant List;");
+        table = new JTable(, columns);
+
+
+    }
+
+    public void listReservations(){
+        JFrame frame;
+
+        frame = new JFrame("Restaurant Creation");
+    }
+
+    public void createReservation(){
+        JFrame frame;
+
+        frame = new JFrame("Reservation Creation");
     }
 }
