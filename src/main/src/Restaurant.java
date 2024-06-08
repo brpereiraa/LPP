@@ -29,7 +29,7 @@ public class Restaurant {
 
     @Override
     public String toString(){
-        return ("Name: " + this.name + " | Location: " + this.location + " | Capacity: " + this.capacity);
+        return (this.name);
     }
 
 }

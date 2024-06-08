@@ -23,9 +23,4 @@ public class RestaurantLux extends Restaurant {
         this.valet = restaurant.getValet();
         this.tastingMenu = restaurant.getMenu();
     }
-
-    @Override
-    public String toString(){
-        return ( super.toString() + " | Valet: " + this.valet + " | Degustation Menu: " +  this.tastingMenu);
-    }
 }

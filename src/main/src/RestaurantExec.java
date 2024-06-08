@@ -23,9 +23,4 @@ public class RestaurantExec extends Restaurant {
         this.privateRoom = restaurant.getRoom();
         this.gourmetMenu = restaurant.getMenu();
     }
-
-    @Override
-    public String toString(){
-        return super.toString() + ( " | Private Room: " + this.privateRoom + " | Menu Gourmet: " + this.gourmetMenu);
-    }
 }
